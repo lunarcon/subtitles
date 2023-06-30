@@ -19,12 +19,9 @@ with sr.Microphone(device_index=None) as source:
 		try:
 			text = r.recognize_google(audio)
 			sock.send(text.encode('ascii'))
-			print(text)
 		except sr.UnknownValueError:
 			sock.send("(?)".encode('ascii'))
-			print("(?)")
 		except sr.RequestError as e:
 			sock.send("(E!) {0}".format(e).encode('ascii'))
-			print("(E!) {0}".format(e))
 		except KeyboardInterrupt:
 			break
