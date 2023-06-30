@@ -11,4 +11,4 @@ Live-ish physical subtitles *displayed* using arduino
 <img src="assets/diagram.png" width=300>
 
 # known issues
-the parola display scrolling is a blocking operation. If another line of text is sent during a scroll, it doesn't register. ~fix~ workaround coming sometime. maybe.
+If another line of text is sent during a scroll, it may not register. ~fix~ workaround coming sometime. maybe.
